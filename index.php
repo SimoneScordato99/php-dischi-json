@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dischi json</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
 <div id="app">
-
-
-<div v-for="(elem,index) in data" key class="card" style="width: 18rem;">
-  <img :src="data.poster" class="card-img-top" :alt="data.title">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
+    <div style="background-color: #1D2D3C;">
+        <div class="d-flex justify-content-center  flex-wrap  ">
+            <div v-for="(elem,index) in data" key class="card mario ">
+                <img :src="elem.poster" class="card-img-top giuseppe " :alt="elem.title">
+                <div class="card-body">
+                    <h3 class="card-text">{{elem.title}}</h3>
+                    <h4 class="card-text">{{elem.author}}</h4>
+                    <p class="card-text">{{elem.genre}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

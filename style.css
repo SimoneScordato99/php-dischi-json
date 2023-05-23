@@ -1,0 +1,7 @@
+.card{
+    width: calc(100% / 3 - 120px);
+    margin: 20px 40px;
+}
+.giuseppe{
+    width: 100%;
+}
