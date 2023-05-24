@@ -12,16 +12,38 @@
     
 <div id="app">
     <div style="background-color: #1D2D3C;">
-        <div class="d-flex justify-content-center  flex-wrap  ">
-            <div v-for="(elem,index) in data" key class="card mario ">
+
+        <div class="d-flex justify-content-center flex-wrap  ">
+            <botton v-for="(elem,index) in data" key="index" class="card mario" type="button" data-bs-toggle="modal" :data-bs-target="`#${index}`">
                 <img :src="elem.poster" class="card-img-top giuseppe " :alt="elem.title">
                 <div class="card-body">
                     <h3 class="card-text">{{elem.title}}</h3>
                     <h4 class="card-text">{{elem.author}}</h4>
                     <p class="card-text">{{elem.genre}}</p>
                 </div>
-            </div>
+
+                <div class="modal fade" :id="index" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">{{elem.title}}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                            <img :src="elem.poster" class="card-img-top giuseppe " :alt="elem.title">
+                        <div class="card-body">
+                            <h3 class="card-text">{{elem.title}}</h3>
+                            <h4 class="card-text">{{elem.author}}</h4>
+                            <p class="card-text">{{elem.genre}}</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </botton>
         </div>
+
+
     </div>
 </div>
 
